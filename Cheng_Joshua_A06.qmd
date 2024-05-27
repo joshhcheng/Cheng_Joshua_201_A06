@@ -48,7 +48,7 @@ To get full credit for this Question you must:
 
 ## Github Repo Link
 
-[https://your-github-repo-url](https://your-github-repo-url)
+[https://github.com/joshhcheng/Cheng_Joshua_201_A06](https://github.com/joshhcheng/Cheng_Joshua_201_A06)
 
 :::
 
@@ -56,7 +56,7 @@ To get full credit for this Question you must:
 
 ## Screenshot/image of RStudio
 
-![](filepath.png)
+![](Screenshot 2024-05-20 at 8.50.58 PM.png)
 
 :::
 
@@ -102,7 +102,11 @@ Extract the value `8162` (LeBron James points) in 2 different ways:
 - using names
 
 ```{r}
+#using indexing
+player_info[[2]][[4]]
 
+#using names
+player_info$LJ$points
 ```
 
 
@@ -113,7 +117,16 @@ Add a new named element to the end of each player's list called `height`. The he
 Print the `player_info` list to prove you were successful.
 
 ```{r}
+#adding height using for loop
+heights = c(78,81,78,86,85)
 
+for (i in 1:length(player_info)){
+  #assign each player with a value in the vector
+  player_info[[i]][["height"]] = heights[[i]]
+}
+
+#print the updated list
+player_info
 ```
 
 
@@ -132,7 +145,17 @@ Hint: initialize an empty list
 Note: this must still run correctly even if the values were to change or if another player were added to the list or if the player order changed.
 
 ```{r}
+#initialize a new list
+points_per_game = list()
 
+#use a for loop to iterate through the list
+for (player in names(player_info)){
+  #assign each player with a value from their info
+  points_per_game[player] = player_info[[player]][[4]]/player_info[[player]][[3]]
+}
+
+#print the new list
+points_per_game
 ```
 
 
@@ -143,7 +166,16 @@ Use the list created in Part c and an appropriate apply function to round each v
 Store the output as a vector and print the results.
 
 ```{r}
+#define a function for the sapply
+round_fun = function(x){
+  round(x, 2)
+}
 
+#use the sapply function to apply to the whole list
+rounded_ppg = sapply(points_per_game, round_fun)
+
+#print the new vector
+rounded_ppg
 ```
 
 
@@ -164,7 +196,17 @@ ie: 91 rounds to 90; 173 rounds to 200; 1450 rounds to 1000
 Hint: use `MARGIN = 1:2` to apply the function to each value instead of only a row/col.
 
 ```{r}
+mat_rand
+#define a function to round the data
+round_fun2 = function(x){
+  round(x, -nchar(x)+1)
+}
 
+#use apply function to store the values after using the function
+rppg = apply(mat_rand, MARGIN = 1:2, round_fun2)
+
+#print the result
+rppg
 ```
 
 
