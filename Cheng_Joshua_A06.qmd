@@ -247,15 +247,15 @@ No need to print any output here.
 
 ```{r}
 # Slice only state of CO
-co_temp = filter(max_temps, max_temps$state == "CO")
+co_temp = max_temps[max_temps$state == "CO", ]
 print(co_temp)
 
 # Slice only state of OH
-oh_temp = filter(max_temps, max_temps$state == "OH")
+oh_temp = max_temps[max_temps$state == "CO", ]
 print(oh_temp)
 
 # Slice only state of VA
-va_temp = filter(max_temps, max_temps$state == "VA")
+va_temp = max_temps[max_temps$state == "CO", ]
 print(va_temp)
 ```
 
@@ -299,6 +299,21 @@ Example: The number 312 would return 6 (3 + 1 + 2)
 Run your function with 935068.
 
 ```{r}
+#create the function
+dig_add = function(x){
+  #return x if it is one digit
+  if (nchar(x) == 1){
+    return(x)
+  }
+  
+  #if it is more than one digit, return the sum of the one's place digit and
+  #the result from the function with the rest of the number
+  else{
+    return(x%%10 + dig_add(floor(x/10)))
+  }
+}
 
+#print the result with the number
+dig_add(935068)
 ```
 
