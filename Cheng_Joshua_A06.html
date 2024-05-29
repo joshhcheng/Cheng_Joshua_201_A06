@@ -3419,12 +3419,12 @@ $SO
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>mat_rand</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2] [,3] [,4] [,5]
-[1,] 1369   76 1291   52   13
-[2,]  308 1606  670 1168  452
-[3,]   59 1895 1236   97  362
-[4,] 1959 1835 1195   15   82
-[5,]   48  835   24 1985  803
-[6,]  867  355   28  871  592</code></pre>
+[1,]   47 1967  717  711  277
+[2,] 1190  865 1965  710 1069
+[3,] 1493  393   14  366   36
+[4,]  520   24 1470  685   60
+[5,] 1228 1246 1626   70   45
+[6,]   30 1870   98  743   56</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">#define a function to round the data</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>round_fun2 <span class="ot">=</span> <span class="cf">function</span>(x){</span>
@@ -3438,12 +3438,12 @@ $SO
 <span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>rppg</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2] [,3] [,4] [,5]
-[1,] 1000   80 1000   50   10
-[2,]  300 2000  700 1000  500
-[3,]   60 2000 1000  100  400
-[4,] 2000 2000 1000   20   80
-[5,]   50  800   20 2000  800
-[6,]  900  400   30  900  600</code></pre>
+[1,]   50 2000  700  700  300
+[2,] 1000  900 2000  700 1000
+[3,] 1000  400   10  400   40
+[4,]  500   20 1000  700   60
+[5,] 1000 1000 2000   70   40
+[6,]   30 2000  100  700   60</code></pre>
 </div>
 </div>
 </section>
@@ -3557,7 +3557,7 @@ $SO
 <p>Note: This code should still run successfully even if the numbers were to change.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co">#find the annual median temp</span></span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>median_annual_temp <span class="ot">=</span> <span class="fu">apply</span>(co_temp[, <span class="dv">3</span><span class="sc">:</span><span class="dv">13</span>], <span class="dv">1</span>, median)</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>median_annual_temp <span class="ot">=</span> <span class="fu">apply</span>(co_temp[, <span class="dv">3</span><span class="sc">:</span><span class="dv">14</span>], <span class="dv">1</span>, median)</span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="co">#print the result with year</span></span>
 <span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">&quot;The maximum median annual temperature of %f occurred in %d and the minimum median annual temperature of %f occurred in %d.&quot;</span>,</span>
@@ -3567,7 +3567,7 @@ $SO
 <span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>        co_temp<span class="sc">$</span>year[<span class="fu">which.min</span>(median_annual_temp)]</span>
 <span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>        )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] &quot;The maximum median annual temperature of 67.800000 occurred in 1963 and the minimum median annual temperature of 51.700000 occurred in 1984.&quot;</code></pre>
+<pre><code>[1] &quot;The maximum median annual temperature of 63.950000 occurred in 1934 and the minimum median annual temperature of 50.850000 occurred in 1984.&quot;</code></pre>
 </div>
 </div>
 </section>

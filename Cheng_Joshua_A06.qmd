@@ -278,7 +278,7 @@ Note: This code should still run successfully even if the numbers were to change
 
 ```{r}
 #find the annual median temp
-median_annual_temp = apply(co_temp[, 3:13], 1, median)
+median_annual_temp = apply(co_temp[, 3:14], 1, median)
 
 #print the result with year
 sprintf("The maximum median annual temperature of %f occurred in %d and the minimum median annual temperature of %f occurred in %d.",
