@@ -3419,12 +3419,12 @@ $SO
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>mat_rand</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2] [,3] [,4] [,5]
-[1,]   47 1967  717  711  277
-[2,] 1190  865 1965  710 1069
-[3,] 1493  393   14  366   36
-[4,]  520   24 1470  685   60
-[5,] 1228 1246 1626   70   45
-[6,]   30 1870   98  743   56</code></pre>
+[1,] 1537  508  816 1751 1972
+[2,]   43   95  565   29  207
+[3,] 1870   78 1234 1612  112
+[4,]  776  924   12  917 1924
+[5,]  743   14   45 1382   62
+[6,]  115   16 1621   24 1336</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">#define a function to round the data</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>round_fun2 <span class="ot">=</span> <span class="cf">function</span>(x){</span>
@@ -3438,12 +3438,12 @@ $SO
 <span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>rppg</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2] [,3] [,4] [,5]
-[1,]   50 2000  700  700  300
-[2,] 1000  900 2000  700 1000
-[3,] 1000  400   10  400   40
-[4,]  500   20 1000  700   60
-[5,] 1000 1000 2000   70   40
-[6,]   30 2000  100  700   60</code></pre>
+[1,] 2000  500  800 2000 2000
+[2,]   40  100  600   30  200
+[3,] 2000   80 1000 2000  100
+[4,]  800  900   10  900 2000
+[5,]  700   10   40 1000   60
+[6,]  100   20 2000   20 1000</code></pre>
 </div>
 </div>
 </section>
@@ -3560,14 +3560,14 @@ $SO
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>median_annual_temp <span class="ot">=</span> <span class="fu">apply</span>(co_temp[, <span class="dv">3</span><span class="sc">:</span><span class="dv">14</span>], <span class="dv">1</span>, median)</span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="co">#print the result with year</span></span>
-<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">&quot;The maximum median annual temperature of %f occurred in %d and the minimum median annual temperature of %f occurred in %d.&quot;</span>,</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">&quot;The maximum median annual temperature of %.2f occurred in %d and the minimum median annual temperature of %.2f occurred in %d.&quot;</span>,</span>
 <span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>        <span class="fu">max</span>(median_annual_temp),</span>
 <span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>        co_temp<span class="sc">$</span>year[<span class="fu">which.max</span>(median_annual_temp)],</span>
 <span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>        <span class="fu">min</span>(median_annual_temp),</span>
 <span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>        co_temp<span class="sc">$</span>year[<span class="fu">which.min</span>(median_annual_temp)]</span>
 <span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>        )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] &quot;The maximum median annual temperature of 63.950000 occurred in 1934 and the minimum median annual temperature of 50.850000 occurred in 1984.&quot;</code></pre>
+<pre><code>[1] &quot;The maximum median annual temperature of 63.95 occurred in 1934 and the minimum median annual temperature of 50.85 occurred in 1984.&quot;</code></pre>
 </div>
 </div>
 </section>
