@@ -56,7 +56,7 @@ To get full credit for this Question you must:
 
 ## Screenshot/image of RStudio
 
-![](Screenshot 2024-05-20 at 8.50.58 PM.png)
+![](Screenshot.png)
 
 :::
 
