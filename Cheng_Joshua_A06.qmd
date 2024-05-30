@@ -196,7 +196,6 @@ ie: 91 rounds to 90; 173 rounds to 200; 1450 rounds to 1000
 Hint: use `MARGIN = 1:2` to apply the function to each value instead of only a row/col.
 
 ```{r}
-mat_rand
 #define a function to round the data
 round_fun2 = function(x){
   round(x, -nchar(x)+1)
